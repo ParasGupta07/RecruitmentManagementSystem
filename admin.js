@@ -156,6 +156,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) => {
         console.error("Error pushing data:", error);
       });
+      const createJobScreen = document.getElementById("createJobScreen");
+        createJobScreen.innerHTML = ("New Job Opening Created!!");
+        setTimeout(() => {
+          createJobScreen.style.display = 'none';
+        }, 5000);
     form.reset()
   })
 })

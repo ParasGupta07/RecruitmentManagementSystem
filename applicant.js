@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
               skills: data.skills,
               education: data.education,
               experience: data.experience,
-              // phone: data.phone
+              phone: data.phone
             })
             console.log(data)
             resumeData = data
@@ -141,6 +141,11 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
     console.log("Uploading")
+    const uploadedResumeScreen = document.getElementById("uploadedResumeScreen");
+          uploadedResumeScreen.innerHTML = ("Resume Uploaded!!");
+          setTimeout(() => {
+            uploadedResumeScreen.style.display = 'none';
+          }, 5000)
     upload(input.files[0])
   })
 })
