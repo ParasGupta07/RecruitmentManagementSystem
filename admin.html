@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ------------------header------------------- -->
+    <header class="text-gray-600 body-font">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          id="headerUser"
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <span class="ml-3 text-xl">Hello User</span>
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a class="mr-5 hover:text-gray-900" href="/">Login</a>
+          <a class="mr-5 hover:text-gray-900" href="/about.html">About</a>
+          <a class="mr-5 hover:text-gray-900" href="/contact.html">Contact</a>
+        </nav>
+        <div>
+          <button
+            class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+          >
+            <a href="/signup.html">Signup</a>
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-4 h-4 ml-1"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          <button
+            onclick="signOut()"
+            class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+          >
+            <a href="/signup.html">Logout</a>
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-4 h-4 ml-1"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- ---------------------------------create job openings----------------- -->
+    <br /><br /><br />
+    <form id="newJobOpening" class="max-w-sm mx-auto">
+      <h1
+        class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900"
+      >
+        Create new job opening
+      </h1>
+      <br />
+      <div class="mb-5">
+        <label
+          for="title"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Title</label
+        >
+        <input
+          type="text"
+          id="title"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="description"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Job Description</label
+        >
+        <input
+          type="text"
+          id="description"
+          class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div>
+        <label
+          for="totalApplications"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Total Applications</label
+        >
+        <input
+          type="number"
+          id="totalApplications"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <br />
+      <div class="mb-5">
+        <label
+          for="companyName"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Company Name</label
+        >
+        <input
+          type="text"
+          id="companyName"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <br /><br />
+      <button
+        onclick="createJobOpening()"
+        class="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0 ml-64"
+      >
+        Create
+      </button>
+    </form>
+    <br /><br /><br /><br />
+    <!-- ----------------------------applicants------------------- -->
+    <section class="text-gray-600 body-font">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2
+          class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1"
+        >
+          Applicants
+        </h2>
+        <h1
+          class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
+        >
+          You can see the applicants who have applied for any job
+        </h1>
+      </div>
+
+      <div id="container"></div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

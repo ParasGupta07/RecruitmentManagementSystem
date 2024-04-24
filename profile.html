@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Page</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+    
+    <div class="bg-gray-100 p-4">
+<!-- ------------------header------------------- -->
+<header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a id="headerUser" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <span class="ml-3 text-xl">Hello User</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900" href="/">Login</a>
+        <a class="mr-5 hover:text-gray-900" href="/about.html">About</a>
+        <a class="mr-5 hover:text-gray-900" href="/contact.html">Contact</a>
+      </nav>
+      <div>
+        <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="/signup.html">Signup</a>
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+        <button onclick="signOut()" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="/signup.html">Logout</a>
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+        <div class="border-1 shadow-lg shadow-gray-700 rounded-lg">
+    
+            <!-- top content -->
+            <div class="flex rounded-t-lg bg-top-color sm:px-2 w-full">    
+                <div class="w-2/3 sm:text-center pl-5 mt-10 text-start">
+                    <p id="applicantName" class="font-poppins font-bold text-heading sm:text-4xl text-2xl">
+                    </p>
+                    <p id="profileHeadline" class="text-heading"></p>
+                </div>
+    
+            </div>
+    
+            <!-- main content -->
+            <div class="w-auto p-5">
+    
+                <div class="flex flex-col sm:flex-row sm:mt-10">
+    
+                    <div class="flex flex-col sm:w-1/3">
+                        <!-- My contact -->
+                        <div class="py-3 sm:order-none order-3">
+                            <h2 class="text-lg font-poppins font-bold text-top-color">My Contact</h2>
+                            <div class="border-2 w-20 border-top-color my-3"></div>
+                            <div>
+                                <div class="flex items-center my-1">
+                                    <div id="email" class=""></div>
+                                </div>
+                                <div class="flex items-center my-1">
+                                    <div id="phoneNumber"></div>
+                                </div>
+                                <div class="flex items-center my-1">
+                                    <div id="address"></div>
+                                </div>
+    
+                            </div>
+                        </div>
+                        <!-- Skills -->
+                        <div class="py-3 sm:order-none order-2">
+                            <h2 class="text-lg font-poppins font-bold text-top-color">Skills</h2>
+                            <div class="border-2 w-20 border-top-color my-3"></div>
+    
+                            <div id="skillsContainer">    
+                            </div>
+                        </div>
+                        <!-- Education Background -->
+                        <div class="py-3 sm:order-none order-1">
+                            <h2 class="text-lg font-poppins font-bold text-top-color">Education Background</h2>
+                            <div class="border-2 w-20 border-top-color my-3"></div>
+    
+                            <div id="educationContainer" class="flex flex-col space-y-1">  
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="flex flex-col sm:w-2/3 order-first sm:order-none sm:-mt-10">
+    
+                        <!-- About me -->
+                        <div class="py-3">
+                            <h2 class="text-lg font-poppins font-bold text-top-color">Applied for:</h2>
+                            <div class="border-2 w-20 border-top-color my-3"></div>
+                            <p id="appliedFor"></p>
+                        </div>
+    
+                        <!-- Professional Experience -->
+                        <div class="py-3">
+                            <h2 class="text-lg font-poppins font-bold text-top-color">Professional Experience</h2>
+                            <div class="border-2 w-20 border-top-color my-3"></div>
+    
+                            <div id="experienceContainer" class="flex flex-col">
+                            </div>
+    
+                        </div>
+
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+          <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
+          <script src="profile.js"></script>
+</body>
+</html>
