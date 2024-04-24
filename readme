@@ -1,0 +1,13 @@
+1.
+If you have the zip folder of this project then you have to first of all extract it to a specified folder.
+
+2.
+If you have a code editor such as visual studio code and through the extension-"live server", you can view this at a local host.
+
+3.
+The only this you have to change a link in "admin.js" file.
+--------const linkUrl = new URL("http://127.0.0.1:5500/profile.html");--------
+In this link, you have to write your localhost link and you if you are opening it on another domain then paste that link here in place of "127.0.0.1:5500" only.
+
+Thankyou, Happy Coding
+Made by Paras Gupta
